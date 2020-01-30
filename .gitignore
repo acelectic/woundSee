@@ -1,0 +1,10 @@
+
+data/
+
+__pycache__/
+
+image/
+
+*.h5
+
+*.png
