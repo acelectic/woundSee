@@ -2,6 +2,11 @@ import numpy as np
 import cv2
 import os
 
+def dilationImage(image, kernel=7):
+    kernel = np.ones((kernel, kernel), np.uint8)
+    image = cv2.dilate(image, kernel, iterations = 1)
+    return image
+
 def check_path(path, display=False):
     exists = os.path.exists( path )
     if not exists:
@@ -13,11 +18,13 @@ def check_path(path, display=False):
 def read_image_rgb( path ):
     bgr = cv2.imread( path , cv2.IMREAD_COLOR )
     rgb = cv2.cvtColor( bgr , cv2.COLOR_BGR2RGB )
+    # rgb = dilationImage(rgb)
     return rgb
 
 
 def read_image_grayscale( path ):
     grayscale = cv2.imread( path , cv2.IMREAD_GRAYSCALE )
+    # grayscale = dilationImage(grayscale)
     return grayscale
 
 

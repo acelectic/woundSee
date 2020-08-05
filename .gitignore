@@ -8,3 +8,21 @@ image/
 *.h5
 
 *.png
+
+.ipynb_checkpoints/
+
+KoreanPLoS-2016/
+
+KoreanPLoS-2016-test-extact/
+
+result_color_compare_repair_common/
+
+temp_bbox/
+
+wound_korean/
+
+*.zip
+*.jpg
+*.png
+*.json
+*.vott
